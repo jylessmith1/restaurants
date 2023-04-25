@@ -1,12 +1,12 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 const { menuItems } = require('../models');
 
 router.get('/', async (req, res) => {
     const menuItem = await menuItems.findAll()
     res.json(menuItem);
-
 });
+
 router.get('/:id', async (req, res) => {
     const menuItem = await menuItems.findAll()
     const { id } = req.params
@@ -22,12 +22,11 @@ router.get('/:id', async (req, res) => {
 });
 
 router.post('/', async (req, res) => {
-    const menuItem = await menuItems.findAll()
     const newMenuItem = {
         name: req.body.name,
         price: req.body.price 
     }
-    menuItem.push(newMenuItem)
+    const menuItem = await menuItems.create(newMenuItem)
+    res.status(201).send(newMenuItem)
 })
-
 module.exports = router;

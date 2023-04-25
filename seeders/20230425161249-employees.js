@@ -4,28 +4,34 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.bulkInsert('menuItems', [
+    await queryInterface.bulkInsert('Employees', [
       {
-        name: 'Cheeseburger',
-        price: 9.99,
+        first_name: 'John',
+        Last_name: 'Doe',
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        name: 'Chicken Sandwich',
-        price: 8.99,
+        first_name: 'Jane',
+        Last_name: 'Doe',
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        name: 'Caesar Salad',
-        price: 6.99,
+        first_name: 'Bob',
+        Last_name: 'Smith',
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        first_name: 'Alice',
+        Last_name: 'Johnson',
         createdAt: new Date(),
         updatedAt: new Date()
       }
     ], {});
   },
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.bulkDelete('menuItems', null, {});
+    await queryInterface.bulkDelete('Employees', null, {});
   }
 };
