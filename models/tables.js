@@ -2,6 +2,7 @@
 const {
   Model
 } = require('sequelize');
+
 module.exports = (sequelize, DataTypes) => {
   class Tables extends Model {
     /**
@@ -14,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Tables.init({
-    last_name: DataTypes.STRING
+  //insert data
   }, {
     sequelize,
     modelName: 'Tables',

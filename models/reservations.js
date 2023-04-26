@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Reservations.init({
-    time: DataTypes.INTEGER
+    reservation_time: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Reservations',

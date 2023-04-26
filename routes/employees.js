@@ -1,14 +1,14 @@
 const express = require('express');
 const router = express.Router();
-const { employees } = require('../models');
+const { Employees } = require('../models');
 
 router.get('/', async (req, res) => {
-    const employee = await employees.findAll()
+    const employee = await Employees.findAll()
     res.json(employee);
 });
 
 router.get('/:id', async (req, res) => {
-    const employee = await employees.findAll()
+    const employee = await Employees.findAll()
     const { id } = req.params
 
     employee.forEach(Item => {
@@ -26,7 +26,7 @@ router.post('/', async (req, res) => {
         first_name: req.body.first_name,
         Last_name: req.body.Last_name 
     }
-    const employee = await employees.create(newemployee)
+    const employee = await Employees.create(newemployee)
     res.status(201).send(newemployee)
 });
 module.exports = router;
