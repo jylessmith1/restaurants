@@ -24,7 +24,7 @@ router.get('/:id', async (req, res) => {
 router.post('/', async (req, res) => {
     const newemployee = {
         first_name: req.body.first_name,
-        Last_name: req.body.Last_name 
+        last_name: req.body.last_name 
     }
     const employee = await Employees.create(newemployee)
     res.status(201).send(newemployee)

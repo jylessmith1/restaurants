@@ -1,22 +1,22 @@
 const express = require('express');
 const router = express.Router();
-const { menuItems } = require('../models');
+const { MenuItems } = require('../models');
 
 router.get('/', async (req, res) => {
-    const menuItem = await menuItems.findAll()
-    res.json(menuItem);
+    const MenuItem = await MenuItems.findAll()
+    res.json(MenuItem);
 });
 
 router.get('/:id', async (req, res) => {
-    const menuItem = await menuItems.findAll()
+    const MenuItem = await MenuItems.findAll()
     const { id } = req.params
 
-    menuItem.forEach(Item => {
+    MenuItem.forEach(Item => {
         if(id == Item.id) {
             res.json(Item)
         }
     });
-    res.json(menuItems);
+    res.json(MenuItems);
     console.log(id)
 
 });
@@ -26,7 +26,7 @@ router.post('/', async (req, res) => {
         name: req.body.name,
         price: req.body.price 
     }
-    const menuItem = await menuItems.create(newMenuItem)
+    const MenuItem = await MenuItems.create(newMenuItem)
     res.status(201).send(newMenuItem)
 })
 module.exports = router;

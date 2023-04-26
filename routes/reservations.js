@@ -24,8 +24,8 @@ router.get('/:id', async (req, res) => {
 
 router.post('/', async (req, res) => {
     const newreservation = {
-      
-        reservation_time: req.body.reservation_time,
+
+      time: req.body.time,
         
     }
     const reservation = await Reservations.create(newreservation)

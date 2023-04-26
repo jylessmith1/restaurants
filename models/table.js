@@ -2,7 +2,6 @@
 const {
   Model
 } = require('sequelize');
-
 module.exports = (sequelize, DataTypes) => {
   class Tables extends Model {
     /**
@@ -12,10 +11,14 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Tables.hasMany(models.Reservation, {
+        foreignKey: 'table_id',
+        as: 'reservations'
+      })
     }
   }
   Tables.init({
-  //insert data
+    name: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Tables',

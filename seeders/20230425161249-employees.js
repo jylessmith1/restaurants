@@ -8,25 +8,25 @@ module.exports = {
     [
       {
         first_name: 'John',
-        Last_name: 'Doe',
+        last_name: 'Doe',
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         first_name: 'Jane',
-        Last_name: 'Doe',
+        last_name: 'Doe',
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         first_name: 'Bob',
-        Last_name: 'Smith',
+        last_name: 'Smith',
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         first_name: 'Alice',
-        Last_name: 'Johnson',
+        last_name: 'Johnson',
         createdAt: new Date(),
         updatedAt: new Date()
       }
