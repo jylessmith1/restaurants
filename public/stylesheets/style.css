@@ -1,7 +1,7 @@
-body {
+/* body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: coral;
+  
 }
 
 a {
@@ -11,4 +11,108 @@ a {
 .container, #section3{
   display:flex;
   justify-content: space-between;
+} */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgb(245, 131, 90);
+}
+
+/* Header */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Main */
+main {
+  margin: 20px;
+}
+
+/* Menu Section */
+#Menu-Section {
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+h3 {
+  margin-top: 0;
+  color: #666;
+}
+
+.menu-item {
+  margin-bottom: 10px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Resturants Container */
+#resturants-container {
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+.specials {
+  text-align: center;
+}
+
+h3 {
+  margin-top: 0;
+  color: #666;
+}
+
+/* Section 3 */
+#section3 {
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+/* Section 4 */
+#section4 {
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #40a7a4;
 }
